@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: whitesmoke;
+    color: black;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.carousel {
+    width: 98.8vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: 400vw; /* 4 slides (3 + 1 duplicate) */
+    animation: slide 12s infinite linear;
+  }
+  
+  .slide {
+    width: 100vw;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0%    { transform: translateX(0); }
+    25%   { transform: translateX(0); }
+    30%   { transform: translateX(-100vw); }
+    55%   { transform: translateX(-100vw); }
+    60%   { transform: translateX(-200vw); }
+    85%   { transform: translateX(-200vw); }
+    90%   { transform: translateX(-300vw); }
+    100%  { transform: translateX(-300vw); }
+  }
+
+.featured-stories {
+    padding: 20px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.story-card {
+    height: 30rem;
+    background-image: url("assets/rebel.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.story-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
